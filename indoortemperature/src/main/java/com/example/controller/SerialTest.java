@@ -94,7 +94,6 @@ public class SerialTest implements SerialPortEventListener {
 	 * @throws InterruptedException 
 	 */
 	public void close() throws InterruptedException {
-		wait();
 		if (serialPort != null) {
 			serialPort.removeEventListener();
 			serialPort.close();
@@ -115,7 +114,6 @@ public class SerialTest implements SerialPortEventListener {
 				System.err.println(e.toString());
 			}
 		}
-		notifyAll();
 	}
 
 //	public static void main(String[] args) throws Exception {
